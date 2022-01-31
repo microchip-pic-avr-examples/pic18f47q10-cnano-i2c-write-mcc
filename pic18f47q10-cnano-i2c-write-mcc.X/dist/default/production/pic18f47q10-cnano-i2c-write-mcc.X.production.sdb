@@ -1,0 +1,792 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F47Q10 ]
+[d frameptr 4065 ]
+"77 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+[e E12995 . `uc
+I2C_ERROR_NONE 0
+I2C_ERROR_ADDR_NACK 1
+I2C_ERROR_DATA_NACK 2
+I2C_ERROR_BUS_COLLISION 3
+]
+"94
+[e E13004 . `uc
+I2C_STATE_IDLE 0
+I2C_STATE_SEND_RD_ADDR 1
+I2C_STATE_SEND_WR_ADDR 2
+I2C_STATE_TX 3
+I2C_STATE_RX 4
+I2C_STATE_NACK 5
+I2C_STATE_ERROR 6
+I2C_STATE_STOP 7
+I2C_STATE_RESET 8
+]
+"32 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\main.c
+[e E13011 . `uc
+I2C_ERROR_NONE 0
+I2C_ERROR_ADDR_NACK 1
+I2C_ERROR_DATA_NACK 2
+I2C_ERROR_BUS_COLLISION 3
+]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"34 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\main.c
+[v _main main `(i  1 e 2 0 ]
+"112 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+"128
+[v _I2C1_Deinitialize I2C1_Deinitialize `(v  1 e 1 0 ]
+"138
+[v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
+"157
+[v _I2C1_Read I2C1_Read `(a  1 e 1 0 ]
+"176
+[v _I2C1_WriteRead I2C1_WriteRead `(a  1 e 1 0 ]
+"195
+[v _I2C1_ErrorGet I2C1_ErrorGet `(E12995  1 e 1 0 ]
+"202
+[v _I2C1_IsBusy I2C1_IsBusy `(a  1 e 1 0 ]
+"207
+[v _I2C1_CallbackRegister I2C1_CallbackRegister `(v  1 e 1 0 ]
+"215
+[v _I2C1_Tasks I2C1_Tasks `(v  1 e 1 0 ]
+"237
+[v _I2C1_ReadStart I2C1_ReadStart `(v  1 s 1 I2C1_ReadStart ]
+"243
+[v _I2C1_WriteStart I2C1_WriteStart `(v  1 s 1 I2C1_WriteStart ]
+"249
+[v _I2C1_Close I2C1_Close `(v  1 s 1 I2C1_Close ]
+"261
+[v _I2C1_EventHandler I2C1_EventHandler `(v  1 s 1 I2C1_EventHandler ]
+"277
+[v _I2C1_ErrorEventHandler I2C1_ErrorEventHandler `(v  1 s 1 I2C1_ErrorEventHandler ]
+"286
+[v _I2C1_DefaultCallback I2C1_DefaultCallback `(v  1 s 1 I2C1_DefaultCallback ]
+"292
+[v _I2C1_EVENT_IDLE I2C1_EVENT_IDLE `(E13004  1 s 1 I2C1_EVENT_IDLE ]
+"298
+[v _I2C1_EVENT_SEND_RD_ADDR I2C1_EVENT_SEND_RD_ADDR `(E13004  1 s 1 I2C1_EVENT_SEND_RD_ADDR ]
+"304
+[v _I2C1_EVENT_SEND_WR_ADDR I2C1_EVENT_SEND_WR_ADDR `(E13004  1 s 1 I2C1_EVENT_SEND_WR_ADDR ]
+"310
+[v _I2C1_EVENT_TX I2C1_EVENT_TX `(E13004  1 s 1 I2C1_EVENT_TX ]
+"336
+[v _I2C1_EVENT_RX I2C1_EVENT_RX `(E13004  1 s 1 I2C1_EVENT_RX ]
+"368
+[v _I2C1_EVENT_NACK I2C1_EVENT_NACK `(E13004  1 s 1 I2C1_EVENT_NACK ]
+"375
+[v _I2C1_EVENT_ERROR I2C1_EVENT_ERROR `(E13004  1 s 1 I2C1_EVENT_ERROR ]
+"382
+[v _I2C1_EVENT_STOP I2C1_EVENT_STOP `(E13004  1 s 1 I2C1_EVENT_STOP ]
+"389
+[v _I2C1_EVENT_RESET I2C1_EVENT_RESET `(E13004  1 s 1 I2C1_EVENT_RESET ]
+"399
+[v _I2C1_DataReceive I2C1_DataReceive `(uc  1 s 1 I2C1_DataReceive ]
+"404
+[v _I2C1_DataTransmit I2C1_DataTransmit `(v  1 s 1 I2C1_DataTransmit ]
+"409
+[v _I2C1_BusReset I2C1_BusReset `T(v  1 s 1 I2C1_BusReset ]
+"415
+[v _I2C1_ReceiveEnable I2C1_ReceiveEnable `T(v  1 s 1 I2C1_ReceiveEnable ]
+"420
+[v _I2C1_RestartEnable I2C1_RestartEnable `T(v  1 s 1 I2C1_RestartEnable ]
+"425
+[v _I2C1_RestartDisable I2C1_RestartDisable `T(v  1 s 1 I2C1_RestartDisable ]
+"430
+[v _I2C1_StartSend I2C1_StartSend `T(v  1 s 1 I2C1_StartSend ]
+"435
+[v _I2C1_StopSend I2C1_StopSend `T(v  1 s 1 I2C1_StopSend ]
+"440
+[v _I2C1_AckSend I2C1_AckSend `T(v  1 s 1 I2C1_AckSend ]
+"446
+[v _I2C1_NackSend I2C1_NackSend `T(v  1 s 1 I2C1_NackSend ]
+"452
+[v _I2C1_IsNack I2C1_IsNack `(a  1 s 1 I2C1_IsNack ]
+"457
+[v _I2C1_IsData I2C1_IsData `(a  1 s 1 I2C1_IsData ]
+"462
+[v _I2C1_IsAddr I2C1_IsAddr `(a  1 s 1 I2C1_IsAddr ]
+"467
+[v _I2C1_IsRxBufFull I2C1_IsRxBufFull `(a  1 s 1 I2C1_IsRxBufFull ]
+"472
+[v _I2C1_InterruptClear I2C1_InterruptClear `T(v  1 s 1 I2C1_InterruptClear ]
+"477
+[v _I2C1_ErrorInterruptClear I2C1_ErrorInterruptClear `T(v  1 s 1 I2C1_ErrorInterruptClear ]
+"482
+[v _I2C1_StatusFlagsClear I2C1_StatusFlagsClear `T(v  1 s 1 I2C1_StatusFlagsClear ]
+"46 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"52 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"93
+[v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
+"102
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+"106
+[v _INT0_DefaultInterruptHandler INT0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"119
+[v _INT1_CallBack INT1_CallBack `(v  1 e 1 0 ]
+"128
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+"132
+[v _INT1_DefaultInterruptHandler INT1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"145
+[v _INT2_CallBack INT2_CallBack `(v  1 e 1 0 ]
+"154
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+"158
+[v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
+"47 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"49 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"14169 C:/Users/M63376/.mchp_packs/Microchip/PIC18F-Q_DFP/1.12.193/xc8\pic\include\proc\pic18f47q10.h
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3762 ]
+"14379
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3763 ]
+[s S915 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 INT1IF 1 0 :1:1 
+`uc 1 INT2IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"15648
+[u S922 . 1 `S915 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES922  1 e 1 @3781 ]
+[s S525 . 1 `uc 1 SSPIF 1 0 :1:0 
+`uc 1 BCLIF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 TX2IF 1 0 :1:6 
+`uc 1 RC2IF 1 0 :1:7 
+]
+"15780
+[s S534 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+]
+[u S540 . 1 `S525 1 . 1 0 `S534 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES540  1 e 1 @3784 ]
+"16628
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3795 ]
+"16698
+[v _OSCCON2 OSCCON2 `VEuc  1 e 1 @3796 ]
+"16768
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @3797 ]
+"16808
+[v _OSCSTAT OSCSTAT `VEuc  1 e 1 @3798 ]
+"16920
+[v _OSCEN OSCEN `VEuc  1 e 1 @3799 ]
+"16971
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @3800 ]
+"17029
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @3801 ]
+"17942
+[v _RB1PPS RB1PPS `VEuc  1 e 1 @3819 ]
+"17986
+[v _RB2PPS RB2PPS `VEuc  1 e 1 @3820 ]
+"19086
+[v _IOCAF IOCAF `VEuc  1 e 1 @3845 ]
+"19148
+[v _IOCAN IOCAN `VEuc  1 e 1 @3846 ]
+"19210
+[v _IOCAP IOCAP `VEuc  1 e 1 @3847 ]
+"19272
+[v _INLVLA INLVLA `VEuc  1 e 1 @3848 ]
+"19334
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @3849 ]
+"19396
+[v _ODCONA ODCONA `VEuc  1 e 1 @3850 ]
+"19458
+[v _WPUA WPUA `VEuc  1 e 1 @3851 ]
+"19520
+[v _ANSELA ANSELA `VEuc  1 e 1 @3852 ]
+"19582
+[v _IOCBF IOCBF `VEuc  1 e 1 @3853 ]
+"19644
+[v _IOCBN IOCBN `VEuc  1 e 1 @3854 ]
+"19706
+[v _IOCBP IOCBP `VEuc  1 e 1 @3855 ]
+"19768
+[v _INLVLB INLVLB `VEuc  1 e 1 @3856 ]
+"19830
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @3857 ]
+"19892
+[v _ODCONB ODCONB `VEuc  1 e 1 @3858 ]
+"19954
+[v _WPUB WPUB `VEuc  1 e 1 @3859 ]
+"20016
+[v _ANSELB ANSELB `VEuc  1 e 1 @3860 ]
+"20078
+[v _IOCCF IOCCF `VEuc  1 e 1 @3861 ]
+"20140
+[v _IOCCN IOCCN `VEuc  1 e 1 @3862 ]
+"20202
+[v _IOCCP IOCCP `VEuc  1 e 1 @3863 ]
+"20264
+[v _INLVLC INLVLC `VEuc  1 e 1 @3864 ]
+"20326
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @3865 ]
+"20388
+[v _ODCONC ODCONC `VEuc  1 e 1 @3866 ]
+"20450
+[v _WPUC WPUC `VEuc  1 e 1 @3867 ]
+"20512
+[v _ANSELC ANSELC `VEuc  1 e 1 @3868 ]
+"20574
+[v _INLVLD INLVLD `VEuc  1 e 1 @3869 ]
+"20636
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @3870 ]
+"20698
+[v _ODCOND ODCOND `VEuc  1 e 1 @3871 ]
+"20760
+[v _WPUD WPUD `VEuc  1 e 1 @3872 ]
+"20822
+[v _ANSELD ANSELD `VEuc  1 e 1 @3873 ]
+"20884
+[v _IOCEF IOCEF `VEuc  1 e 1 @3874 ]
+"20905
+[v _IOCEN IOCEN `VEuc  1 e 1 @3875 ]
+"20926
+[v _IOCEP IOCEP `VEuc  1 e 1 @3876 ]
+"20947
+[v _INLVLE INLVLE `VEuc  1 e 1 @3877 ]
+"20985
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @3878 ]
+"21017
+[v _ODCONE ODCONE `VEuc  1 e 1 @3879 ]
+"21049
+[v _WPUE WPUE `VEuc  1 e 1 @3880 ]
+"21087
+[v _ANSELE ANSELE `VEuc  1 e 1 @3881 ]
+"27485
+[v _LATA LATA `VEuc  1 e 1 @3970 ]
+"27547
+[v _LATB LATB `VEuc  1 e 1 @3971 ]
+"27609
+[v _LATC LATC `VEuc  1 e 1 @3972 ]
+"27671
+[v _LATD LATD `VEuc  1 e 1 @3973 ]
+"27733
+[v _LATE LATE `VEuc  1 e 1 @3974 ]
+"27765
+[v _TRISA TRISA `VEuc  1 e 1 @3975 ]
+"27887
+[v _TRISB TRISB `VEuc  1 e 1 @3976 ]
+"28009
+[v _TRISC TRISC `VEuc  1 e 1 @3977 ]
+"28131
+[v _TRISD TRISD `VEuc  1 e 1 @3978 ]
+"28253
+[v _TRISE TRISE `VEuc  1 e 1 @3979 ]
+"28601
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @3985 ]
+"28621
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @3986 ]
+"28811
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @3988 ]
+[s S261 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W 1 0 :1:2 
+]
+"28960
+[s S264 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A 1 0 :1:5 
+]
+[s S267 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+[s S276 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S281 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S286 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE 1 0 :1:2 
+]
+[s S289 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS 1 0 :1:5 
+]
+[s S292 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S297 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[s S302 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DAT 1 0 :1:5 
+]
+[s S308 . 1 `uc 1 BF1 1 0 :1:0 
+`uc 1 UA1 1 0 :1:1 
+`uc 1 R 1 0 :1:2 
+`uc 1 START 1 0 :1:3 
+`uc 1 STOP 1 0 :1:4 
+`uc 1 D 1 0 :1:5 
+`uc 1 CKE1 1 0 :1:6 
+`uc 1 SMP1 1 0 :1:7 
+]
+[s S317 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW 1 0 :1:2 
+`uc 1 START1 1 0 :1:3 
+`uc 1 STOP1 1 0 :1:4 
+`uc 1 DA 1 0 :1:5 
+]
+[s S323 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 RW1 1 0 :1:2 
+`uc 1 I2C_START1 1 0 :1:3 
+`uc 1 I2C_STOP2 1 0 :1:4 
+`uc 1 DA1 1 0 :1:5 
+]
+[s S329 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ1 1 0 :1:2 
+`uc 1 S2 1 0 :1:3 
+`uc 1 P2 1 0 :1:4 
+`uc 1 DATA_ADDRESS1 1 0 :1:5 
+]
+[s S335 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A1 1 0 :1:5 
+]
+[s S340 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 D_NOT_A1 1 0 :1:5 
+]
+[s S343 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_nA1 1 0 :1:5 
+]
+[s S348 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_NOT_W1 1 0 :1:2 
+]
+[s S351 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_nW1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 I2C_DAT1 1 0 :1:5 
+]
+[s S356 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_W2 1 0 :1:2 
+]
+[s S359 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_A2 1 0 :1:5 
+]
+[s S362 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW2 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA2 1 0 :1:5 
+]
+[s S367 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_WRITE1 1 0 :1:2 
+]
+[s S370 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 NOT_ADDRESS1 1 0 :1:5 
+]
+[s S373 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE1 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS1 1 0 :1:5 
+]
+[u S378 . 1 `S261 1 . 1 0 `S264 1 . 1 0 `S267 1 . 1 0 `S276 1 . 1 0 `S281 1 . 1 0 `S286 1 . 1 0 `S289 1 . 1 0 `S292 1 . 1 0 `S297 1 . 1 0 `S302 1 . 1 0 `S308 1 . 1 0 `S317 1 . 1 0 `S323 1 . 1 0 `S329 1 . 1 0 `S335 1 . 1 0 `S340 1 . 1 0 `S343 1 . 1 0 `S348 1 . 1 0 `S351 1 . 1 0 `S356 1 . 1 0 `S359 1 . 1 0 `S362 1 . 1 0 `S367 1 . 1 0 `S370 1 . 1 0 `S373 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES378  1 e 1 @3988 ]
+"29265
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @3989 ]
+[s S208 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"29295
+[s S214 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S219 . 1 `uc 1 SSPM01 1 0 :1:0 
+`uc 1 SSPM11 1 0 :1:1 
+`uc 1 SSPM21 1 0 :1:2 
+`uc 1 SSPM31 1 0 :1:3 
+`uc 1 CKP1 1 0 :1:4 
+`uc 1 SSPEN1 1 0 :1:5 
+`uc 1 SSPOV1 1 0 :1:6 
+`uc 1 WCOL1 1 0 :1:7 
+]
+[u S228 . 1 `S208 1 . 1 0 `S214 1 . 1 0 `S219 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES228  1 e 1 @3989 ]
+"29385
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @3990 ]
+[s S648 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"29432
+[s S657 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK 1 0 :5:1 
+]
+[s S660 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 ADMSK1 1 0 :1:1 
+`uc 1 ADMSK2 1 0 :1:2 
+`uc 1 ADMSK3 1 0 :1:3 
+`uc 1 ADMSK4 1 0 :1:4 
+`uc 1 ADMSK5 1 0 :1:5 
+]
+[s S667 . 1 `uc 1 SEN1 1 0 :1:0 
+`uc 1 ADMSK11 1 0 :1:1 
+`uc 1 ADMSK21 1 0 :1:2 
+`uc 1 ADMSK31 1 0 :1:3 
+`uc 1 ACKEN1 1 0 :1:4 
+`uc 1 ACKDT1 1 0 :1:5 
+`uc 1 ACKSTAT1 1 0 :1:6 
+`uc 1 GCEN1 1 0 :1:7 
+]
+[s S676 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RSEN1 1 0 :1:1 
+`uc 1 PEN1 1 0 :1:2 
+`uc 1 RCEN1 1 0 :1:3 
+`uc 1 ADMSK41 1 0 :1:4 
+`uc 1 ADMSK51 1 0 :1:5 
+]
+[u S683 . 1 `S648 1 . 1 0 `S657 1 . 1 0 `S660 1 . 1 0 `S667 1 . 1 0 `S676 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES683  1 e 1 @3990 ]
+"29572
+[v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @3991 ]
+[s S878 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"37530
+[s S886 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"37530
+[s S890 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+"37530
+[u S894 . 1 `S878 1 . 1 0 `S886 1 . 1 0 `S890 1 . 1 0 ]
+"37530
+"37530
+[v _INTCONbits INTCONbits `VES894  1 e 1 @4082 ]
+[s S50 . 30 `*.38(v 1 Initialize 3 0 `*.38(v 1 Deinitialize 3 3 `*.38(a 1 Write 3 6 `*.38(a 1 Read 3 9 `*.38(a 1 WriteRead 3 12 `*.38(a 1 TransferSetup 3 15 `*.38(E12995 1 ErrorGet 3 18 `*.38(a 1 IsBusy 3 21 `*.38(v 1 CallbackRegister 3 24 `*.38(v 1 Tasks 3 27 ]
+"77 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+[v _i2c1_host_interface i2c1_host_interface `CS50  1 e 30 0 ]
+"93
+[v _I2C1_Callback I2C1_Callback `*.38(v  1 s 3 I2C1_Callback ]
+[s S152 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.39uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12995 1 errorState 1 12 `E13004 1 state 1 13 ]
+"94
+[v _i2c1Status i2c1Status `VES152  1 e 14 0 ]
+"97
+[v _i2c1_eventTable i2c1_eventTable `C[9]*.38(E13004  1 e 27 0 ]
+"48 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/interrupt.c
+[v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
+"49
+[v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
+"50
+[v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
+"34 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"39
+[v main@data data `[2]uc  1 a 2 10 ]
+"86
+} 0
+"49 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"47 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"136
+} 0
+"52 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"81
+} 0
+"154
+[v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT2_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"156
+} 0
+"128
+[v _INT1_SetInterruptHandler INT1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT1_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"130
+} 0
+"102
+[v _INT0_SetInterruptHandler INT0_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
+"104
+} 0
+"112 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+{
+"126
+} 0
+"207
+[v _I2C1_CallbackRegister I2C1_CallbackRegister `(v  1 e 1 0 ]
+{
+[v I2C1_CallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 0 ]
+"213
+} 0
+"46 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"63
+} 0
+"138 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+[v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
+{
+"140
+[v I2C1_Write@retStatus retStatus `a  1 a 1 7 ]
+"138
+[v I2C1_Write@address address `us  1 p 2 1 ]
+[v I2C1_Write@data data `*.39uc  1 p 2 3 ]
+[v I2C1_Write@dataLength dataLength `ui  1 p 2 5 ]
+"155
+} 0
+"243
+[v _I2C1_WriteStart I2C1_WriteStart `(v  1 s 1 I2C1_WriteStart ]
+{
+"247
+} 0
+"430
+[v _I2C1_StartSend I2C1_StartSend `T(v  1 s 1 I2C1_StartSend ]
+{
+"433
+} 0
+"202
+[v _I2C1_IsBusy I2C1_IsBusy `(a  1 e 1 0 ]
+{
+"205
+} 0
+"215
+[v _I2C1_Tasks I2C1_Tasks `(v  1 e 1 0 ]
+{
+"232
+} 0
+"261
+[v _I2C1_EventHandler I2C1_EventHandler `(v  1 s 1 I2C1_EventHandler ]
+{
+"275
+} 0
+"452
+[v _I2C1_IsNack I2C1_IsNack `(a  1 s 1 I2C1_IsNack ]
+{
+"455
+} 0
+"457
+[v _I2C1_IsData I2C1_IsData `(a  1 s 1 I2C1_IsData ]
+{
+"460
+} 0
+"462
+[v _I2C1_IsAddr I2C1_IsAddr `(a  1 s 1 I2C1_IsAddr ]
+{
+"465
+} 0
+"277
+[v _I2C1_ErrorEventHandler I2C1_ErrorEventHandler `(v  1 s 1 I2C1_ErrorEventHandler ]
+{
+"284
+} 0
+"389
+[v _I2C1_EVENT_RESET I2C1_EVENT_RESET `(E13004  1 s 1 I2C1_EVENT_RESET ]
+{
+"394
+} 0
+"382
+[v _I2C1_EVENT_STOP I2C1_EVENT_STOP `(E13004  1 s 1 I2C1_EVENT_STOP ]
+{
+"387
+} 0
+"375
+[v _I2C1_EVENT_ERROR I2C1_EVENT_ERROR `(E13004  1 s 1 I2C1_EVENT_ERROR ]
+{
+"377
+[v I2C1_EVENT_ERROR@retEventState retEventState `E13004  1 a 1 0 ]
+"380
+} 0
+"368
+[v _I2C1_EVENT_NACK I2C1_EVENT_NACK `(E13004  1 s 1 I2C1_EVENT_NACK ]
+{
+"370
+[v I2C1_EVENT_NACK@retEventState retEventState `E13004  1 a 1 0 ]
+"373
+} 0
+"336
+[v _I2C1_EVENT_RX I2C1_EVENT_RX `(E13004  1 s 1 I2C1_EVENT_RX ]
+{
+"338
+[v I2C1_EVENT_RX@retEventState retEventState `E13004  1 a 1 0 ]
+"366
+} 0
+"304
+[v _I2C1_EVENT_SEND_WR_ADDR I2C1_EVENT_SEND_WR_ADDR `(E13004  1 s 1 I2C1_EVENT_SEND_WR_ADDR ]
+{
+"308
+} 0
+"298
+[v _I2C1_EVENT_SEND_RD_ADDR I2C1_EVENT_SEND_RD_ADDR `(E13004  1 s 1 I2C1_EVENT_SEND_RD_ADDR ]
+{
+"302
+} 0
+"292
+[v _I2C1_EVENT_IDLE I2C1_EVENT_IDLE `(E13004  1 s 1 I2C1_EVENT_IDLE ]
+{
+"296
+} 0
+"310
+[v _I2C1_EVENT_TX I2C1_EVENT_TX `(E13004  1 s 1 I2C1_EVENT_TX ]
+{
+"312
+[v I2C1_EVENT_TX@retEventState retEventState `E13004  1 a 1 1 ]
+"334
+} 0
+"420
+[v _I2C1_RestartEnable I2C1_RestartEnable `T(v  1 s 1 I2C1_RestartEnable ]
+{
+"423
+} 0
+"404
+[v _I2C1_DataTransmit I2C1_DataTransmit `(v  1 s 1 I2C1_DataTransmit ]
+{
+[v I2C1_DataTransmit@data data `uc  1 a 1 wreg ]
+[v I2C1_DataTransmit@data data `uc  1 a 1 wreg ]
+"406
+[v I2C1_DataTransmit@data data `uc  1 a 1 0 ]
+"407
+} 0
+"425
+[v _I2C1_RestartDisable I2C1_RestartDisable `T(v  1 s 1 I2C1_RestartDisable ]
+{
+"428
+} 0
+"415
+[v _I2C1_ReceiveEnable I2C1_ReceiveEnable `T(v  1 s 1 I2C1_ReceiveEnable ]
+{
+"418
+} 0
+"446
+[v _I2C1_NackSend I2C1_NackSend `T(v  1 s 1 I2C1_NackSend ]
+{
+"450
+} 0
+"467
+[v _I2C1_IsRxBufFull I2C1_IsRxBufFull `(a  1 s 1 I2C1_IsRxBufFull ]
+{
+"470
+} 0
+"399
+[v _I2C1_DataReceive I2C1_DataReceive `(uc  1 s 1 I2C1_DataReceive ]
+{
+"402
+} 0
+"440
+[v _I2C1_AckSend I2C1_AckSend `T(v  1 s 1 I2C1_AckSend ]
+{
+"444
+} 0
+"435
+[v _I2C1_StopSend I2C1_StopSend `T(v  1 s 1 I2C1_StopSend ]
+{
+"438
+} 0
+"249
+[v _I2C1_Close I2C1_Close `(v  1 s 1 I2C1_Close ]
+{
+"259
+} 0
+"482
+[v _I2C1_StatusFlagsClear I2C1_StatusFlagsClear `T(v  1 s 1 I2C1_StatusFlagsClear ]
+{
+"486
+} 0
+"472
+[v _I2C1_InterruptClear I2C1_InterruptClear `T(v  1 s 1 I2C1_InterruptClear ]
+{
+"475
+} 0
+"477
+[v _I2C1_ErrorInterruptClear I2C1_ErrorInterruptClear `T(v  1 s 1 I2C1_ErrorInterruptClear ]
+{
+"480
+} 0
+"409
+[v _I2C1_BusReset I2C1_BusReset `T(v  1 s 1 I2C1_BusReset ]
+{
+"413
+} 0
+"286
+[v _I2C1_DefaultCallback I2C1_DefaultCallback `(v  1 s 1 I2C1_DefaultCallback ]
+{
+"289
+} 0
+"195
+[v _I2C1_ErrorGet I2C1_ErrorGet `(E12995  1 e 1 0 ]
+{
+"197
+[v I2C1_ErrorGet@retErrorState retErrorState `E12995  1 a 1 0 ]
+"200
+} 0

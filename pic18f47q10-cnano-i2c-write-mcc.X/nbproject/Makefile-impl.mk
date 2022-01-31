@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=pic18f47q10-cnano-i2c-write-mcc.X
 
 # Active Configuration
-DEFAULTCONF=pro
+DEFAULTCONF=default
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=free pro 
+ALLCONFS=default 
 
 
 # build
@@ -45,15 +45,13 @@ ALLCONFS=free pro
 
 # clobber
 .clobber-impl: .clobber-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=free clean
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pro clean
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default clean
 
 
 
 # all
 .all-impl: .all-pre .depcheck-impl
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=free build
-	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=pro build
+	    ${MAKE} SUBPROJECTS=${SUBPROJECTS} CONF=default build
 
 
 

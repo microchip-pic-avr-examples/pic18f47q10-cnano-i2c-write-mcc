@@ -1,73 +1,86 @@
 /*
-    (c) 2020 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
+© [2022] Microchip Technology Inc. and its subsidiaries.
+
+    Subject to your compliance with these terms, you may use Microchip 
+    software and any derivatives exclusively with Microchip products. 
+    You are responsible for complying with 3rd party license terms  
+    applicable to your use of 3rd party software (including open source  
+    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
+    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
+    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
+    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
+    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
+    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
+    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
+    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
+    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
+    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
+    THIS SOFTWARE.
 */
+#include "mcc_generated_files/system/system.h"
+#include "mcc_generated_files/i2c_host/i2c_host_types.h"
+#include "mcc_generated_files/i2c_host/mssp1.h"
 
-#include "mcc_generated_files/mcc.h"
-#include "mcc_generated_files/examples/i2c1_master_example.h"
-
-#define I2C_SLAVE_ADDR              0x20
+#define I2C_CLIENT_ADDR             0x20
 #define MCP23008_REG_ADDR_IODIR     0x00
 #define MCP23008_REG_ADDR_GPIO      0x09
 #define PINS_DIGITAL_OUTPUT         0x00
-#define PINS_DIGITAL_LOW            0x00
 #define PINS_DIGITAL_HIGH           0xFF
+#define DATALENGTH                  2
 
-/*
-                         Main application
- */
-void main(void)
+const i2c_host_interface_t *I2C = &i2c1_host_interface;
+
+int main(void)
 {
-    // Initialize the device
+    /* Initialize the device */
     SYSTEM_Initialize();
-
-    // If using interrupts in PIC18 High/Low Priority Mode you need to enable the Global High and Low Interrupts
-    // If using interrupts in PIC Mid-Range Compatibility Mode you need to enable the Global and Peripheral Interrupts
-    // Use the following macros to:
-
-    // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
+    __delay_ms(20);
+    uint8_t data[DATALENGTH];
     
-    /* Set the extended pins as digital output */
-    I2C1_Write1ByteRegister(I2C_SLAVE_ADDR, MCP23008_REG_ADDR_IODIR, PINS_DIGITAL_OUTPUT);
-    
-    while (1)
+    /* Configure GPIO as output */
+    data[0] = MCP23008_REG_ADDR_IODIR;
+    data[1] = PINS_DIGITAL_OUTPUT;
+    if (I2C->Write(I2C_CLIENT_ADDR, data, DATALENGTH))
     {
-        /* Set the extended pins to digital low */
-        I2C1_Write1ByteRegister(I2C_SLAVE_ADDR, MCP23008_REG_ADDR_GPIO, PINS_DIGITAL_LOW);
-        __delay_ms(500);
-        /* Set the extended pins to digital high */
-        I2C1_Write1ByteRegister(I2C_SLAVE_ADDR, MCP23008_REG_ADDR_GPIO, PINS_DIGITAL_HIGH);
-        __delay_ms(500);
-	}
+        while(I2C->IsBusy())
+        {
+            I2C->Tasks();
+        }
+        if (I2C->ErrorGet() == I2C_ERROR_NONE)
+        {
+            /* Write operation is successful */
+        }
+        else
+        {
+            /* Error handling */
+        }
+    }
+    /* Write data to GPIO pins */
+    data[0] = MCP23008_REG_ADDR_GPIO;
+    data[1] = PINS_DIGITAL_HIGH;
+    
+    while(1)
+    {
+        if (I2C->Write(I2C_CLIENT_ADDR, data, DATALENGTH))
+        {
+            while(I2C->IsBusy())
+            {
+                I2C->Tasks();
+            }
+            if (I2C->ErrorGet() == I2C_ERROR_NONE)
+            {
+                /* Write operation is successful */
+            }
+            else
+            {
+                /* Error handling */
+            }
+            
+            /* Toggle the output data */
+            data[1] = ~data[1];
+        } 
+        /* Delay 1 second */
+         __delay_ms(1000);
+    }
 }
-/**
- End of File
-*/
