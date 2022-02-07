@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Mon Jan 31 10:50:18 2022
+                                                                                               Mon Feb 07 09:42:18 2022
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	18F47Q10
@@ -203,14 +203,14 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    189  0000                     _RB1PPS	set	3819
    190  0000                     _SSP1CLKPPS	set	3762
    191  0000                     _PIR0bits	set	3781
-   192  0000                     _PIR3bits	set	3784
-   193  0000                     _OSCTUNE	set	3800
-   194  0000                     _OSCSTAT	set	3798
-   195  0000                     _OSCFRQ	set	3801
-   196  0000                     _OSCEN	set	3799
-   197  0000                     _OSCCON3	set	3797
-   198  0000                     _OSCCON2	set	3796
-   199  0000                     _OSCCON1	set	3795
+   192  0000                     _OSCTUNE	set	3800
+   193  0000                     _OSCSTAT	set	3798
+   194  0000                     _OSCFRQ	set	3801
+   195  0000                     _OSCEN	set	3799
+   196  0000                     _OSCCON3	set	3797
+   197  0000                     _OSCCON2	set	3796
+   198  0000                     _OSCCON1	set	3795
+   199  0000                     _PIR3bits	set	3784
    200  0000                     _IOCEF	set	3874
    201  0000                     _IOCEN	set	3875
    202  0000                     _IOCEP	set	3876
@@ -338,7 +338,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    324                           	callstack 0
    325  00001B                     I2C1_ErrorGet@retErrorState:
    326                           	callstack 0
-   327  00001B                     _I2C1_IsBusy$793:
+   327  00001B                     _I2C1_IsBusy$799:
    328                           	callstack 0
    329  00001B                     I2C1_EVENT_RX@retEventState:
    330                           	callstack 0
@@ -405,7 +405,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
    391 ;; Auto vars:     Size  Location     Type
    392 ;;  data            2   10[COMRAM] unsigned char [2]
    393 ;; Return value:  Size  Location     Type
-   394 ;;                  2  471[None  ] int 
+   394 ;;                  2  293[None  ] int 
    395 ;; Registers used:
    396 ;;		wreg, fsr2l, fsr2h, status,2, status,0, pclath, tosl, tblptrl, tblptrh, tblptru, prodl, prodh, cstack
    397 ;; Tracked objects:
@@ -1474,7 +1474,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1406  001570  EFBC  F00A         	goto	u451
   1407  001574  EFBE  F00A         	goto	u450
   1408  001578                     u451:
-  1409  001578  EFC4  F00A         	goto	l155
+  1409  001578  EFC4  F00A         	goto	l149
   1410  00157C                     u450:
   1411  00157C                     
   1412                           ;mcc_generated_files/i2c_host/src/mssp1.c: 210:     {;mcc_generated_files/i2c_host/src/m
@@ -1482,7 +1482,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1413  00157C  C01B  F018         	movff	I2C1_CallbackRegister@callbackHandler,_I2C1_Callback
   1414  001580  C01C  F019         	movff	I2C1_CallbackRegister@callbackHandler+1,_I2C1_Callback+1
   1415  001584  C01D  F01A         	movff	I2C1_CallbackRegister@callbackHandler+2,_I2C1_Callback+2
-  1416  001588                     l155:
+  1416  001588                     l149:
   1417  001588  0012               	return		;funcret
   1418  00158A                     __end_of_I2C1_CallbackRegister:
   1419                           	callstack 0
@@ -1619,7 +1619,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1538  0013EE  EFFB  F009         	goto	u481
   1539  0013F2  EFFD  F009         	goto	u480
   1540  0013F6                     u481:
-  1541  0013F6  EF1B  F00A         	goto	l1631
+  1541  0013F6  EF1B  F00A         	goto	l1637
   1542  0013FA                     u480:
   1543  0013FA                     
   1544                           ;mcc_generated_files/i2c_host/src/mssp1.c: 142:     {;mcc_generated_files/i2c_host/src/m
@@ -1667,7 +1667,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1583                           ;mcc_generated_files/i2c_host/src/mssp1.c: 152:         retStatus = 1;
   1584  001432  0E01               	movlw	1
   1585  001434  6E22               	movwf	I2C1_Write@retStatus^0,c
-  1586  001436                     l1631:
+  1586  001436                     l1637:
   1587                           
   1588                           ;mcc_generated_files/i2c_host/src/mssp1.c: 154:     return retStatus;
   1589  001436  5022               	movf	I2C1_Write@retStatus^0,w,c
@@ -1821,24 +1821,24 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1721                           ;mcc_generated_files/i2c_host/src/mssp1.c: 204:     return i2c1Status.busy || SSP1STATbi
       +                          ts.S;
   1722  001516  0E01               	movlw	1
-  1723  001518  6E1B               	movwf	_I2C1_IsBusy$793^0,c
+  1723  001518  6E1B               	movwf	_I2C1_IsBusy$799^0,c
   1724  00151A  5001               	movf	_i2c1Status^0,w,c	;volatile
   1725  00151C  A4D8               	btfss	status,2,c
   1726  00151E  EF93  F00A         	goto	u461
   1727  001522  EF95  F00A         	goto	u460
   1728  001526                     u461:
-  1729  001526  EF9E  F00A         	goto	l150
+  1729  001526  EF9E  F00A         	goto	l144
   1730  00152A                     u460:
   1731  00152A  B694               	btfsc	148,3,c	;volatile
   1732  00152C  EF9A  F00A         	goto	u471
   1733  001530  EF9C  F00A         	goto	u470
   1734  001534                     u471:
-  1735  001534  EF9E  F00A         	goto	l150
+  1735  001534  EF9E  F00A         	goto	l144
   1736  001538                     u470:
   1737  001538  0E00               	movlw	0
-  1738  00153A  6E1B               	movwf	_I2C1_IsBusy$793^0,c
-  1739  00153C                     l150:
-  1740  00153C  501B               	movf	_I2C1_IsBusy$793^0,w,c
+  1738  00153A  6E1B               	movwf	_I2C1_IsBusy$799^0,c
+  1739  00153C                     l144:
+  1740  00153C  501B               	movf	_I2C1_IsBusy$799^0,w,c
   1741  00153E  0012               	return		;funcret
   1742  001540                     __end_of_I2C1_IsBusy:
   1743                           	callstack 0
@@ -1891,14 +1891,14 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1785  001484  EF46  F00A         	goto	u221
   1786  001488  EF48  F00A         	goto	u220
   1787  00148C                     u221:
-  1788  00148C  EF4A  F00A         	goto	l1449
+  1788  00148C  EF4A  F00A         	goto	l1455
   1789  001490                     u220:
   1790  001490                     
   1791                           ; BSR set to: 14
   1792                           ;mcc_generated_files/i2c_host/src/mssp1.c: 218:     {;mcc_generated_files/i2c_host/src/m
       +                          ssp1.c: 219:         I2C1_ErrorEventHandler();
   1793  001490  EC93  F009         	call	_I2C1_ErrorEventHandler	;wreg free
-  1794  001494                     l1449:
+  1794  001494                     l1455:
   1795                           
   1796                           ;mcc_generated_files/i2c_host/src/mssp1.c: 221:     if (PIR3bits.SSP1IF)
   1797  001494  010E               	movlb	14	; () banked
@@ -1906,7 +1906,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1799  001498  EF50  F00A         	goto	u231
   1800  00149C  EF52  F00A         	goto	u230
   1801  0014A0                     u231:
-  1802  0014A0  EF5F  F00A         	goto	l162
+  1802  0014A0  EF5F  F00A         	goto	l156
   1803  0014A4                     u230:
   1804  0014A4                     
   1805                           ; BSR set to: 14
@@ -1916,7 +1916,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1808  0014A6  EF57  F00A         	goto	u241
   1809  0014AA  EF59  F00A         	goto	u240
   1810  0014AE                     u241:
-  1811  0014AE  EF5D  F00A         	goto	l1455
+  1811  0014AE  EF5D  F00A         	goto	l1461
   1812  0014B2                     u240:
   1813  0014B2                     
   1814                           ; BSR set to: 14
@@ -1925,14 +1925,14 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1816  0014B2  EC93  F009         	call	_I2C1_ErrorEventHandler	;wreg free
   1817                           
   1818                           ;mcc_generated_files/i2c_host/src/mssp1.c: 226:         }
-  1819  0014B6  EF5F  F00A         	goto	l162
-  1820  0014BA                     l1455:
+  1819  0014B6  EF5F  F00A         	goto	l156
+  1820  0014BA                     l1461:
   1821                           
   1822                           ; BSR set to: 14
   1823                           ;mcc_generated_files/i2c_host/src/mssp1.c: 228:         {;mcc_generated_files/i2c_host/s
       +                          rc/mssp1.c: 229:             I2C1_EventHandler();
   1824  0014BA  EC08  F009         	call	_I2C1_EventHandler	;wreg free
-  1825  0014BE                     l162:
+  1825  0014BE                     l156:
   1826  0014BE  0012               	return		;funcret
   1827  0014C0                     __end_of_I2C1_Tasks:
   1828                           	callstack 0
@@ -2000,7 +2000,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1885  00121C  EF12  F009         	goto	u161
   1886  001220  EF14  F009         	goto	u160
   1887  001224                     u161:
-  1888  001224  EF24  F009         	goto	l1365
+  1888  001224  EF24  F009         	goto	l1409
   1889  001228                     u160:
   1890  001228  ECD5  F00A         	call	_I2C1_IsNack	;wreg free
   1891  00122C  0900               	iorlw	0
@@ -2008,7 +2008,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1893  001230  EF1C  F009         	goto	u171
   1894  001234  EF1E  F009         	goto	u170
   1895  001238                     u171:
-  1896  001238  EF24  F009         	goto	l1365
+  1896  001238  EF24  F009         	goto	l1409
   1897  00123C                     u170:
   1898  00123C                     
   1899                           ;mcc_generated_files/i2c_host/src/mssp1.c: 265:     {;mcc_generated_files/i2c_host/src/m
@@ -2022,15 +2022,15 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1905  001242  6E0D               	movwf	(_i2c1Status+12)^0,c	;volatile
   1906                           
   1907                           ;mcc_generated_files/i2c_host/src/mssp1.c: 268:     }
-  1908  001244  EF3C  F009         	goto	l1371
-  1909  001248                     l1365:
+  1908  001244  EF3C  F009         	goto	l1415
+  1909  001248                     l1409:
   1910  001248  ECDF  F00A         	call	_I2C1_IsData	;wreg free
   1911  00124C  0900               	iorlw	0
   1912  00124E  B4D8               	btfsc	status,2,c
   1913  001250  EF2C  F009         	goto	u181
   1914  001254  EF2E  F009         	goto	u180
   1915  001258                     u181:
-  1916  001258  EF3C  F009         	goto	l1371
+  1916  001258  EF3C  F009         	goto	l1415
   1917  00125C                     u180:
   1918  00125C  ECD5  F00A         	call	_I2C1_IsNack	;wreg free
   1919  001260  0900               	iorlw	0
@@ -2038,7 +2038,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1921  001264  EF36  F009         	goto	u191
   1922  001268  EF38  F009         	goto	u190
   1923  00126C                     u191:
-  1924  00126C  EF3C  F009         	goto	l1371
+  1924  00126C  EF3C  F009         	goto	l1415
   1925  001270                     u190:
   1926  001270                     
   1927                           ;mcc_generated_files/i2c_host/src/mssp1.c: 270:     {;mcc_generated_files/i2c_host/src/m
@@ -2050,7 +2050,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
       +                          R_DATA_NACK;
   1932  001274  0E02               	movlw	2
   1933  001276  6E0D               	movwf	(_i2c1Status+12)^0,c	;volatile
-  1934  001278                     l1371:
+  1934  001278                     l1415:
   1935                           
   1936                           ;mcc_generated_files/i2c_host/src/mssp1.c: 274:     i2c1Status.state = i2c1_eventTable[i
       +                          2c1Status.state]();
@@ -4666,19 +4666,37 @@ Auto Spaces:
 
 Pointer List with Targets:
 
-    S50$3$1	PTR unsigned char  size(2) Largest target is 0
+    S59$3$1	PTR unsigned char  size(2) Largest target is 0
 
-    S50$4$3	PTR unsigned char  size(2) Largest target is 0
+    S59$4$3	PTR unsigned char  size(2) Largest target is 0
 
-    S50$4$1	PTR unsigned char  size(2) Largest target is 0
+    S59$4$1	PTR unsigned char  size(2) Largest target is 0
 
     Absolute function$0	PTR struct . size(2) Largest target is 0
 
-    S50$8$0	PTR FTN()void  size(3) Largest target is 1
+    S59$8$0	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_DefaultCallback(), 
 
-    S50$2$1	PTR unsigned char  size(2) Largest target is 2
+    S59$2$1	PTR unsigned char  size(2) Largest target is 2
 		 -> main@data(COMRAM[2]), 
+
+    INT2_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> INT2_DefaultInterruptHandler(), 
+
+    INT2_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> INT2_DefaultInterruptHandler(), Absolute function(), 
+
+    INT1_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> INT1_DefaultInterruptHandler(), 
+
+    INT1_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> INT1_DefaultInterruptHandler(), Absolute function(), 
+
+    INT0_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> INT0_DefaultInterruptHandler(), 
+
+    INT0_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
+		 -> INT0_DefaultInterruptHandler(), Absolute function(), 
 
     I2C.Tasks	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_Tasks(), 
@@ -4713,24 +4731,6 @@ Pointer List with Targets:
     I2C	PTR const struct . size(2) Largest target is 30
 		 -> i2c1_host_interface(CODE[30]), 
 
-    INT2_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> INT2_DefaultInterruptHandler(), 
-
-    INT2_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> INT2_DefaultInterruptHandler(), Absolute function(), 
-
-    INT1_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> INT1_DefaultInterruptHandler(), 
-
-    INT1_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> INT1_DefaultInterruptHandler(), Absolute function(), 
-
-    INT0_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> INT0_DefaultInterruptHandler(), 
-
-    INT0_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> INT0_DefaultInterruptHandler(), Absolute function(), 
-
     I2C1_Callback	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_DefaultCallback(), Absolute function(), 
 
@@ -4745,73 +4745,73 @@ Pointer List with Targets:
 		 -> I2C1_EVENT_RX(), I2C1_EVENT_TX(), I2C1_EVENT_SEND_WR_ADDR(), I2C1_EVENT_SEND_RD_ADDR(), 
 		 -> I2C1_EVENT_IDLE(), 
 
-    S152$readPtr	PTR unsigned char  size(2) Largest target is 0
+    S158$readPtr	PTR unsigned char  size(2) Largest target is 0
 		 -> NULL(NULL[0]), 
 
     i2c1Status.readPtr	PTR unsigned char  size(2) Largest target is 0
 		 -> NULL(NULL[0]), 
 
-    S152$writePtr	PTR unsigned char  size(2) Largest target is 2
+    S158$writePtr	PTR unsigned char  size(2) Largest target is 2
 		 -> main@data(COMRAM[2]), NULL(NULL[0]), 
 
     i2c1Status.writePtr	PTR unsigned char  size(2) Largest target is 2
 		 -> main@data(COMRAM[2]), NULL(NULL[0]), 
 
-    S50$Tasks	PTR FTN()void  size(3) Largest target is 1
+    S59$Tasks	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_Tasks(), 
 
     i2c1_host_interface.Tasks	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_Tasks(), 
 
-    S50$CallbackRegister	PTR FTN(PTR FTN()void ,)void  size(3) Largest target is 1
+    S59$CallbackRegister	PTR FTN(PTR FTN()void ,)void  size(3) Largest target is 1
 		 -> I2C1_CallbackRegister(), 
 
     i2c1_host_interface.CallbackRegister	PTR FTN(PTR FTN()void ,)void  size(3) Largest target is 1
 		 -> I2C1_CallbackRegister(), 
 
-    S50$IsBusy	PTR FTN()_Bool  size(3) Largest target is 1
+    S59$IsBusy	PTR FTN()_Bool  size(3) Largest target is 1
 		 -> I2C1_IsBusy(), 
 
     i2c1_host_interface.IsBusy	PTR FTN()_Bool  size(3) Largest target is 1
 		 -> I2C1_IsBusy(), 
 
-    S50$ErrorGet	PTR FTN()enum E12995 size(3) Largest target is 1
+    S59$ErrorGet	PTR FTN()enum E12995 size(3) Largest target is 1
 		 -> I2C1_ErrorGet(), 
 
     i2c1_host_interface.ErrorGet	PTR FTN()enum E12995 size(3) Largest target is 1
 		 -> I2C1_ErrorGet(), 
 
-    S50$TransferSetup	PTR FTN(PTR struct .,unsigned long ,)_Bool  size(3) Largest target is 1
+    S59$TransferSetup	PTR FTN(PTR struct .,unsigned long ,)_Bool  size(3) Largest target is 1
 		 -> Absolute function(), 
 
     i2c1_host_interface.TransferSetup	PTR FTN(PTR struct .,unsigned long ,)_Bool  size(3) Largest target is 1
 		 -> Absolute function(), 
 
-    S50$WriteRead	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
+    S59$WriteRead	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
 		 -> I2C1_WriteRead(), 
 
     i2c1_host_interface.WriteRead	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
 		 -> I2C1_WriteRead(), 
 
-    S50$Read	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
+    S59$Read	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
 		 -> I2C1_Read(), 
 
     i2c1_host_interface.Read	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
 		 -> I2C1_Read(), 
 
-    S50$Write	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
+    S59$Write	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
 		 -> I2C1_Write(), 
 
     i2c1_host_interface.Write	PTR FTN(unsigned short ,PTR unsigned char ,unsigned int ,)_Bool  size(3) Largest target is 1
 		 -> I2C1_Write(), 
 
-    S50$Deinitialize	PTR FTN()void  size(3) Largest target is 1
+    S59$Deinitialize	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_Deinitialize(), 
 
     i2c1_host_interface.Deinitialize	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_Deinitialize(), 
 
-    S50$Initialize	PTR FTN()void  size(3) Largest target is 1
+    S59$Initialize	PTR FTN()void  size(3) Largest target is 1
 		 -> I2C1_Initialize(), 
 
     i2c1_host_interface.Initialize	PTR FTN()void  size(3) Largest target is 1
@@ -5182,10 +5182,10 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Mon Jan 31 10:50:18 2022
+Symbol Table                                                                                   Mon Feb 07 09:42:18 2022
 
                           I2C1_Write@data 001E                    ??_I2C1_DefaultCallback 001B  
-                                      l17 15A8                                        u10 15F6  
+                                      l11 160A                                        u10 15F6  
                                       u11 15F0                                        u30 15E2  
                                       u31 15DC                                        u16 15F8  
                                       u40 15E4                                        u50 15BA  
@@ -5195,29 +5195,29 @@ Symbol Table                                                                    
                                       u56 15BC                                        u81 13C4  
                                       u90 12CA                                        u66 15D0  
                                       u91 12C6                           ??_I2C1_NackSend 001B  
-                         ??_I2C1_BusReset 001B                                       l210 168E  
-                                     l213 1684                                       l222 16D6  
-                                     l150 153C                                       l231 16D2  
-                                     l207 1324                                       l151 153E  
-                                     l135 1438                                       l216 164C  
-                                     l240 16C6                                       l128 1566  
-                                     l312 147E                                       l225 169E  
-                                     l146 1670                                       l234 16CA  
-                                     l162 14BE                                       l322 1634  
-                                     l171 14EA                                       l243 16DA  
-                                     l219 1640                                       l155 1588  
-                                     _I2C 0027                                       l228 16C2  
-                                     l180 1384                                       l252 15BC  
-                                     l261 15F8                                       l237 16CE  
-                                     l270 16B0                                       l246 16AA  
-                                     l183 16DE                                       l255 15D0  
-                                     l335 1626                                       l264 16B6  
-                                     l192 1658                                       l168 167A  
-                                     l249 16A4                                       l177 12B0  
-                                     l281 160A                                       l186 1696  
-                                     l258 15E4                                       l267 16BC  
-                                     l348 1618                                       l189 1664  
-                                     l199 13E0                                       l456 120E  
+                         ??_I2C1_BusReset 001B                                       l201 1324  
+                                     l210 164C                                       l122 1566  
+                                     l140 1670                                       l204 168E  
+                                     l213 1640                                       l222 16C2  
+                                     l231 16CE                                       l207 1684  
+                                     l240 16AA                                       l216 16D6  
+                                     l144 153C                                       l225 16D2  
+                                     l145 153E                                       l129 1438  
+                                     l234 16C6                                       l162 167A  
+                                     l243 16A4                                       l219 169E  
+                                     l171 12B0                                       _I2C 0027  
+                                     l228 16CA                                       l180 1696  
+                                     l252 15E4                                       l156 14BE  
+                                     l340 147E                                       l261 16BC  
+                                     l165 14EA                                       l237 16DA  
+                                     l149 1588                                       l174 1384  
+                                     l246 15BC                                       l350 1634  
+                                     l255 15F8                                       l183 1664  
+                                     l264 16B0                                       l177 16DE  
+                                     l193 13E0                                       l249 15D0  
+                                     l281 15A8                                       l258 16B6  
+                                     l186 1658                                       l363 1626  
+                                     l376 1618                                       l484 120E  
                                      u100 12DC                                       u101 12D8  
                                      u110 1306                                       u111 1302  
                                      u220 1490                                       u221 148C  
@@ -5256,73 +5256,73 @@ Symbol Table                                                                    
                                     l1303 1322                                      l1311 168C  
                                     l1215 163A                                      l1231 15AA  
                                     l1209 16A0                                      l1241 1694  
-                                    l1217 163E                                      l1225 16C4  
-                                    l1401 11C2                                      l1163 16B2  
+                                    l1217 163E                                      l1401 1210  
+                                    l1225 16C4                                      l1163 16B2  
                                     l1171 14CA                                      l1251 164E  
                                     l1307 1686                                      l1315 167C  
                                     l1227 15D2                                      l1235 15BE  
-                                    l1403 11C4                                      l1165 16B8  
+                                    l1411 125C                                      l1403 1214  
+                                    l1331 115A                                      l1165 16B8  
                                     l1173 14D2                                      l1181 16D8  
                                     l1261 1398                                      l1245 165A  
                                     l1253 1656                                      l1309 1686  
-                                    l1317 167C                                      l1183 16BE  
+                                    l1317 167C                                      l1413 1270  
+                                    l1405 1228                                      l1341 117A  
+                                    l1333 116E                                      l1183 16BE  
                                     l1167 16AC                                      l1175 14DE  
                                     l1271 13CC                                      l1263 139E  
                                     l1239 1690                                      l1247 1662  
                                     l1319 1682                                      l1191 1646  
-                                    l1351 132E                                      l1441 166A  
-                                    l1177 14E2                                      l1169 14C0  
-                                    l1185 169A                                      l1273 13D0  
-                                    l1265 13B0                                      l1257 1386  
-                                    l1281 12B2                                      l1193 164A  
-                                    l1353 1332                                      l1361 1228  
-                                    l1345 1672                                      l1329 158A  
-                                    l1601 143A                                      l1179 14E6  
-                                    l1187 16C8                                      l1275 13D8  
-                                    l1267 13B8                                      l1259 1386  
-                                    l1291 12EE                                      l1283 12B6  
-                                    l1355 136A                                      l1371 1278  
-                                    l1363 123C                                      l1451 14A4  
-                                    l1347 1676                                      l1611 146C  
-                                    l1603 1442                                      l1197 15E6  
+                                    l1415 1278                                      l1407 123C  
+                                    l1351 11B6                                      l1343 1182  
+                                    l1335 1170                                      l1177 14E2  
+                                    l1169 14C0                                      l1185 169A  
+                                    l1273 13D0                                      l1265 13B0  
+                                    l1257 1386                                      l1281 12B2  
+                                    l1193 164A                                      l1409 1248  
+                                    l1329 158A                                      l1601 1468  
+                                    l1361 11C4                                      l1353 11B8  
+                                    l1345 1184                                      l1337 1172  
+                                    l1179 14E6                                      l1187 16C8  
+                                    l1275 13D8                                      l1267 13B8  
+                                    l1259 1386                                      l1291 12EE  
+                                    l1283 12B6                                      l1451 1480  
+                                    l1603 146C                                      l1355 11BE  
+                                    l1347 11B2                                      l1339 1174  
+                                    l1445 1666                                      l1197 15E6  
                                     l1269 13C8                                      l1277 13DE  
                                     l1293 12F4                                      l1285 12CA  
-                                    l1189 1642                                      l1349 1326  
-                                    l1365 1248                                      l1357 1210  
-                                    l1453 14B2                                      l1445 1480  
-                                    l1621 140A                                      l1613 13E2  
-                                    l1605 1452                                      l1381 1174  
-                                    l1373 115A                                      l1701 0FDC  
-                                    l1439 1666                                      l1295 1306  
-                                    l1287 12DC                                      l1367 125C  
-                                    l1359 1214                                      l1455 14BA  
-                                    l1447 1490                                      l1623 1412  
-                                    l1631 1436                                      l1615 13E6  
-                                    l1607 1456                                      l1391 11B4  
-                                    l1383 117A                                      l1375 116E  
-                                    l1711 104A                                      l1703 1018  
-                                    l1297 130E                                      l1289 12EA  
-                                    l1369 1270                                      l1449 1494  
-                                    l1625 141A                                      l1617 13FA  
-                                    l1609 1468                                      l1393 11B6  
-                                    l1385 1182                                      l1377 1170  
-                                    l1299 1316                                      l1627 142E  
-                                    l1619 13FE                                      l1395 11B8  
-                                    l1387 1184                                      l1379 1172  
-                                    l1635 15FA                                      l1723 1136  
+                                    l1189 1642                                      l1461 14BA  
+                                    l1453 1490                                      l1605 1516  
+                                    l1621 13E6                                      l1357 11C0  
+                                    l1349 11B4                                      l1613 15FA  
+                                    l1701 0FDC                                      l1447 166A  
+                                    l1295 1306                                      l1287 12DC  
+                                    l1455 1494                                      l1607 152A  
+                                    l1391 1676                                      l1631 141A  
+                                    l1623 13FA                                      l1359 11C2  
+                                    l1615 1602                                      l1711 104A  
+                                    l1703 1018                                      l1297 130E  
+                                    l1289 12EA                                      l1393 1326  
+                                    l1457 14A4                                      l1609 1538  
+                                    l1633 142E                                      l1625 13FE  
+                                    l1617 1606                                      l1299 1316  
+                                    l1395 132E                                      l1459 14B2  
+                                    l1635 1432                                      l1627 140A  
+                                    l1619 13E2                                      l1723 1136  
                                     l1715 10A2                                      l1707 1044  
-                                    l1629 1432                                      l1581 1628  
-                                    l1397 11BE                                      l1389 11B2  
-                                    l1637 1602                                      l1717 10CE  
+                                    l1397 1332                                      l1389 1672  
+                                    l1629 1412                                      l1637 1436  
+                                    l1581 1628                                      l1717 10CE  
                                     l1725 113C                                      l1709 1048  
-                                    l1591 1564                                      l1583 161A  
-                                    l1399 11C0                                      l1639 1606  
-                                    l1719 110A                                      l1593 1516  
+                                    l1399 136A                                      l1591 1564  
+                                    l1583 161A                                      l1719 110A  
                                     l1577 1568                                      l1585 160C  
-                                    l1595 152A                                      l1579 157C  
-                                    l1587 1540                                      l1691 0F50  
-                                    l1597 1538                                      l1589 1554  
-                                    l1693 0F54                                      l1695 0F58  
+                                    l1593 143A                                      l1579 157C  
+                                    l1587 1540                                      l1595 1442  
+                                    l1691 0F50                                      l1589 1554  
+                                    l1597 1452                                      l1693 0F54  
+                                    l1599 1456                                      l1695 0F58  
                                     l1687 0F3C                                      l1689 0F40  
                                     l1699 0FB0                         _I2C1_Deinitialize 000000  
                                     _LATA 000F82                                      _LATB 000F83  
@@ -5391,7 +5391,7 @@ INT0_SetInterruptHandler@InterruptHandler 001B             __size_of_INTERRUPT_I
                            ___rparam_used 000001                      ??_I2C1_RestartEnable 001B  
                           __pcstackCOMRAM 001B           __size_of_I2C1_ErrorEventHandler 0060  
                      ??_SYSTEM_Initialize 001E                 __size_of_I2C1_DataReceive 0004  
-              ??_I2C1_ErrorInterruptClear 001B                           _I2C1_IsBusy$793 001B  
+              ??_I2C1_ErrorInterruptClear 001B                           _I2C1_IsBusy$799 001B  
                      I2C1_Write@retStatus 0022          __end_of_INT2_SetInterruptHandler 161A  
                    __end_of_I2C1_EVENT_RX 1326                     __end_of_I2C1_EVENT_TX 13E2  
                        _I2C1_EventHandler 1210                 __end_of_SYSTEM_Initialize 160C  

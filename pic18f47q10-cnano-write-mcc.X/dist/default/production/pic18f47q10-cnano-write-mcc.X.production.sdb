@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F47Q10 ]
 [d frameptr 4065 ]
-"77 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+"77 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
 [e E12995 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -22,7 +22,7 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
-"32 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\main.c
+"32 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\main.c
 [e E13011 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -53,9 +53,9 @@ I2C_ERROR_BUS_COLLISION 3
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"34 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\main.c
+"34 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\main.c
 [v _main main `(i  1 e 2 0 ]
-"112 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+"112 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "128
 [v _I2C1_Deinitialize I2C1_Deinitialize `(v  1 e 1 0 ]
@@ -137,9 +137,9 @@ I2C_ERROR_BUS_COLLISION 3
 [v _I2C1_ErrorInterruptClear I2C1_ErrorInterruptClear `T(v  1 s 1 I2C1_ErrorInterruptClear ]
 "482
 [v _I2C1_StatusFlagsClear I2C1_StatusFlagsClear `T(v  1 s 1 I2C1_StatusFlagsClear ]
-"46 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/clock.c
+"46 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
-"52 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/interrupt.c
+"52 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "93
 [v _INT0_CallBack INT0_CallBack `(v  1 e 1 0 ]
@@ -159,15 +159,15 @@ I2C_ERROR_BUS_COLLISION 3
 [v _INT2_SetInterruptHandler INT2_SetInterruptHandler `(v  1 e 1 0 ]
 "158
 [v _INT2_DefaultInterruptHandler INT2_DefaultInterruptHandler `(v  1 e 1 0 ]
-"47 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/pins.c
+"47 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"49 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/system.c
+"49 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "14169 C:/Users/M63376/.mchp_packs/Microchip/PIC18F-Q_DFP/1.12.193/xc8\pic\include\proc\pic18f47q10.h
 [v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @3762 ]
 "14379
 [v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @3763 ]
-[s S915 . 1 `uc 1 INT0IF 1 0 :1:0 
+[s S1004 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 INT1IF 1 0 :1:1 
 `uc 1 INT2IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -175,9 +175,9 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "15648
-[u S922 . 1 `S915 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES922  1 e 1 @3781 ]
-[s S525 . 1 `uc 1 SSPIF 1 0 :1:0 
+[u S1011 . 1 `S1004 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1011  1 e 1 @3781 ]
+[s S531 . 1 `uc 1 SSPIF 1 0 :1:0 
 `uc 1 BCLIF 1 0 :1:1 
 `uc 1 SSP2IF 1 0 :1:2 
 `uc 1 BCL2IF 1 0 :1:3 
@@ -187,14 +187,14 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 RC2IF 1 0 :1:7 
 ]
 "15780
-[s S534 . 1 `uc 1 SSP1IF 1 0 :1:0 
+[s S540 . 1 `uc 1 SSP1IF 1 0 :1:0 
 `uc 1 BCL1IF 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 ]
-[u S540 . 1 `S525 1 . 1 0 `S534 1 . 1 0 ]
-[v _PIR3bits PIR3bits `VES540  1 e 1 @3784 ]
+[u S546 . 1 `S531 1 . 1 0 `S540 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES546  1 e 1 @3784 ]
 "16628
 [v _OSCCON1 OSCCON1 `VEuc  1 e 1 @3795 ]
 "16698
@@ -313,14 +313,14 @@ I2C_ERROR_BUS_COLLISION 3
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @3986 ]
 "28811
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @3988 ]
-[s S261 . 1 `uc 1 . 1 0 :2:0 
+[s S267 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "28960
-[s S264 . 1 `uc 1 . 1 0 :5:0 
+[s S270 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S267 . 1 `uc 1 BF 1 0 :1:0 
+[s S273 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -329,39 +329,39 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S276 . 1 `uc 1 . 1 0 :2:0 
+[s S282 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S281 . 1 `uc 1 . 1 0 :2:0 
+[s S287 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S286 . 1 `uc 1 . 1 0 :2:0 
+[s S292 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S289 . 1 `uc 1 . 1 0 :5:0 
+[s S295 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S292 . 1 `uc 1 . 1 0 :2:0 
+[s S298 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S297 . 1 `uc 1 . 1 0 :2:0 
+[s S303 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S302 . 1 `uc 1 . 1 0 :2:0 
+[s S308 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S308 . 1 `uc 1 BF1 1 0 :1:0 
+[s S314 . 1 `uc 1 BF1 1 0 :1:0 
 `uc 1 UA1 1 0 :1:1 
 `uc 1 R 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
@@ -370,84 +370,84 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 CKE1 1 0 :1:6 
 `uc 1 SMP1 1 0 :1:7 
 ]
-[s S317 . 1 `uc 1 . 1 0 :2:0 
+[s S323 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START1 1 0 :1:3 
 `uc 1 STOP1 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S323 . 1 `uc 1 . 1 0 :2:0 
+[s S329 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW1 1 0 :1:2 
 `uc 1 I2C_START1 1 0 :1:3 
 `uc 1 I2C_STOP2 1 0 :1:4 
 `uc 1 DA1 1 0 :1:5 
 ]
-[s S329 . 1 `uc 1 . 1 0 :2:0 
+[s S335 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ1 1 0 :1:2 
 `uc 1 S2 1 0 :1:3 
 `uc 1 P2 1 0 :1:4 
 `uc 1 DATA_ADDRESS1 1 0 :1:5 
 ]
-[s S335 . 1 `uc 1 . 1 0 :2:0 
+[s S341 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A1 1 0 :1:5 
 ]
-[s S340 . 1 `uc 1 . 1 0 :5:0 
+[s S346 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A1 1 0 :1:5 
 ]
-[s S343 . 1 `uc 1 . 1 0 :2:0 
+[s S349 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_nA1 1 0 :1:5 
 ]
-[s S348 . 1 `uc 1 . 1 0 :2:0 
+[s S354 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W1 1 0 :1:2 
 ]
-[s S351 . 1 `uc 1 . 1 0 :2:0 
+[s S357 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_nW1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 I2C_DAT1 1 0 :1:5 
 ]
-[s S356 . 1 `uc 1 . 1 0 :2:0 
+[s S362 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W2 1 0 :1:2 
 ]
-[s S359 . 1 `uc 1 . 1 0 :5:0 
+[s S365 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_A2 1 0 :1:5 
 ]
-[s S362 . 1 `uc 1 . 1 0 :2:0 
+[s S368 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA2 1 0 :1:5 
 ]
-[s S367 . 1 `uc 1 . 1 0 :2:0 
+[s S373 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE1 1 0 :1:2 
 ]
-[s S370 . 1 `uc 1 . 1 0 :5:0 
+[s S376 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS1 1 0 :1:5 
 ]
-[s S373 . 1 `uc 1 . 1 0 :2:0 
+[s S379 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE1 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS1 1 0 :1:5 
 ]
-[u S378 . 1 `S261 1 . 1 0 `S264 1 . 1 0 `S267 1 . 1 0 `S276 1 . 1 0 `S281 1 . 1 0 `S286 1 . 1 0 `S289 1 . 1 0 `S292 1 . 1 0 `S297 1 . 1 0 `S302 1 . 1 0 `S308 1 . 1 0 `S317 1 . 1 0 `S323 1 . 1 0 `S329 1 . 1 0 `S335 1 . 1 0 `S340 1 . 1 0 `S343 1 . 1 0 `S348 1 . 1 0 `S351 1 . 1 0 `S356 1 . 1 0 `S359 1 . 1 0 `S362 1 . 1 0 `S367 1 . 1 0 `S370 1 . 1 0 `S373 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES378  1 e 1 @3988 ]
+[u S384 . 1 `S267 1 . 1 0 `S270 1 . 1 0 `S273 1 . 1 0 `S282 1 . 1 0 `S287 1 . 1 0 `S292 1 . 1 0 `S295 1 . 1 0 `S298 1 . 1 0 `S303 1 . 1 0 `S308 1 . 1 0 `S314 1 . 1 0 `S323 1 . 1 0 `S329 1 . 1 0 `S335 1 . 1 0 `S341 1 . 1 0 `S346 1 . 1 0 `S349 1 . 1 0 `S354 1 . 1 0 `S357 1 . 1 0 `S362 1 . 1 0 `S365 1 . 1 0 `S368 1 . 1 0 `S373 1 . 1 0 `S376 1 . 1 0 `S379 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES384  1 e 1 @3988 ]
 "29265
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @3989 ]
-[s S208 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S214 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "29295
-[s S214 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S220 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[s S219 . 1 `uc 1 SSPM01 1 0 :1:0 
+[s S225 . 1 `uc 1 SSPM01 1 0 :1:0 
 `uc 1 SSPM11 1 0 :1:1 
 `uc 1 SSPM21 1 0 :1:2 
 `uc 1 SSPM31 1 0 :1:3 
@@ -456,11 +456,11 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 SSPOV1 1 0 :1:6 
 `uc 1 WCOL1 1 0 :1:7 
 ]
-[u S228 . 1 `S208 1 . 1 0 `S214 1 . 1 0 `S219 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES228  1 e 1 @3989 ]
+[u S234 . 1 `S214 1 . 1 0 `S220 1 . 1 0 `S225 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES234  1 e 1 @3989 ]
 "29385
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @3990 ]
-[s S648 . 1 `uc 1 SEN 1 0 :1:0 
+[s S654 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -470,17 +470,17 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 GCEN 1 0 :1:7 
 ]
 "29432
-[s S657 . 1 `uc 1 . 1 0 :1:0 
+[s S663 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK 1 0 :5:1 
 ]
-[s S660 . 1 `uc 1 . 1 0 :1:0 
+[s S666 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADMSK1 1 0 :1:1 
 `uc 1 ADMSK2 1 0 :1:2 
 `uc 1 ADMSK3 1 0 :1:3 
 `uc 1 ADMSK4 1 0 :1:4 
 `uc 1 ADMSK5 1 0 :1:5 
 ]
-[s S667 . 1 `uc 1 SEN1 1 0 :1:0 
+[s S673 . 1 `uc 1 SEN1 1 0 :1:0 
 `uc 1 ADMSK11 1 0 :1:1 
 `uc 1 ADMSK21 1 0 :1:2 
 `uc 1 ADMSK31 1 0 :1:3 
@@ -489,18 +489,18 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 ACKSTAT1 1 0 :1:6 
 `uc 1 GCEN1 1 0 :1:7 
 ]
-[s S676 . 1 `uc 1 . 1 0 :1:0 
+[s S682 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RSEN1 1 0 :1:1 
 `uc 1 PEN1 1 0 :1:2 
 `uc 1 RCEN1 1 0 :1:3 
 `uc 1 ADMSK41 1 0 :1:4 
 `uc 1 ADMSK51 1 0 :1:5 
 ]
-[u S683 . 1 `S648 1 . 1 0 `S657 1 . 1 0 `S660 1 . 1 0 `S667 1 . 1 0 `S676 1 . 1 0 ]
-[v _SSP1CON2bits SSP1CON2bits `VES683  1 e 1 @3990 ]
+[u S689 . 1 `S654 1 . 1 0 `S663 1 . 1 0 `S666 1 . 1 0 `S673 1 . 1 0 `S682 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES689  1 e 1 @3990 ]
 "29572
 [v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @3991 ]
-[s S878 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[s S967 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -509,54 +509,54 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "37530
-[s S886 . 1 `uc 1 . 1 0 :6:0 
+[s S975 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
 "37530
-[s S890 . 1 `uc 1 . 1 0 :6:0 
+[s S979 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "37530
-[u S894 . 1 `S878 1 . 1 0 `S886 1 . 1 0 `S890 1 . 1 0 ]
+[u S983 . 1 `S967 1 . 1 0 `S975 1 . 1 0 `S979 1 . 1 0 ]
 "37530
 "37530
-[v _INTCONbits INTCONbits `VES894  1 e 1 @4082 ]
-[s S50 . 30 `*.38(v 1 Initialize 3 0 `*.38(v 1 Deinitialize 3 3 `*.38(a 1 Write 3 6 `*.38(a 1 Read 3 9 `*.38(a 1 WriteRead 3 12 `*.38(a 1 TransferSetup 3 15 `*.38(E12995 1 ErrorGet 3 18 `*.38(a 1 IsBusy 3 21 `*.38(v 1 CallbackRegister 3 24 `*.38(v 1 Tasks 3 27 ]
-"77 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
-[v _i2c1_host_interface i2c1_host_interface `CS50  1 e 30 0 ]
+[v _INTCONbits INTCONbits `VES983  1 e 1 @4082 ]
+[s S59 . 30 `*.38(v 1 Initialize 3 0 `*.38(v 1 Deinitialize 3 3 `*.38(a 1 Write 3 6 `*.38(a 1 Read 3 9 `*.38(a 1 WriteRead 3 12 `*.38(a 1 TransferSetup 3 15 `*.38(E12995 1 ErrorGet 3 18 `*.38(a 1 IsBusy 3 21 `*.38(v 1 CallbackRegister 3 24 `*.38(v 1 Tasks 3 27 ]
+"77 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+[v _i2c1_host_interface i2c1_host_interface `CS59  1 e 30 0 ]
 "93
 [v _I2C1_Callback I2C1_Callback `*.38(v  1 s 3 I2C1_Callback ]
-[s S152 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.39uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12995 1 errorState 1 12 `E13004 1 state 1 13 ]
+[s S158 . 14 `a 1 busy 1 0 `us 1 address 2 1 `*.39uc 1 writePtr 2 3 `ui 1 writeLength 2 5 `*.2uc 1 readPtr 2 7 `ui 1 readLength 2 9 `a 1 switchToRead 1 11 `E12995 1 errorState 1 12 `E13004 1 state 1 13 ]
 "94
-[v _i2c1Status i2c1Status `VES152  1 e 14 0 ]
+[v _i2c1Status i2c1Status `VES158  1 e 14 0 ]
 "97
 [v _i2c1_eventTable i2c1_eventTable `C[9]*.38(E13004  1 e 27 0 ]
-"48 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/interrupt.c
+"48 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/interrupt.c
 [v _INT0_InterruptHandler INT0_InterruptHandler `*.38(v  1 e 3 0 ]
 "49
 [v _INT1_InterruptHandler INT1_InterruptHandler `*.38(v  1 e 3 0 ]
 "50
 [v _INT2_InterruptHandler INT2_InterruptHandler `*.38(v  1 e 3 0 ]
-"34 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\main.c
+"34 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
 "39
 [v main@data data `[2]uc  1 a 2 10 ]
 "86
 } 0
-"49 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/system.c
+"49 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "55
 } 0
-"47 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/pins.c
+"47 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "136
 } 0
-"52 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/interrupt.c
+"52 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/interrupt.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "81
@@ -579,7 +579,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v INT0_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 0 ]
 "104
 } 0
-"112 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+"112 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 {
 "126
@@ -590,12 +590,12 @@ I2C_ERROR_BUS_COLLISION 3
 [v I2C1_CallbackRegister@callbackHandler callbackHandler `*.38(v  1 p 3 0 ]
 "213
 } 0
-"46 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/system/src/clock.c
+"46 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 {
 "63
 } 0
-"138 C:\Users\M63376\OneDrive - Microchip Technology Inc\Documents\GitHub-repos\temp\pic18f47q10-cnano-i2c-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
+"138 C:\Users\M63376\MPLABXProjects\pic18f47q10-cnano-write-mcc.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
 {
 "140

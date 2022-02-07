@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>pic18f47q10-cnano-i2c-write-mcc</name>
-            <creation-uuid>a1a0b9c7-81e6-4a89-a6ea-978fb3faa242</creation-uuid>
+            <name>pic18f47q10-cnano-write-mcc</name>
+            <creation-uuid>8167f907-4f4d-4c43-9425-e8fa3741a1cf</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

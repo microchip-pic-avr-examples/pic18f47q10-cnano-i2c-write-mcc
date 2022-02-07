@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\pic18f47q10-cnano-i2c-write-mcc.X.production.hex">
+  <executable name="dist/default/production\pic18f47q10-cnano-write-mcc.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>131072</length>

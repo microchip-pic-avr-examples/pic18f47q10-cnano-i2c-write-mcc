@@ -7,7 +7,7 @@
   200100h - 2FFFFFh
   30000Ch - 30003Fh
   
- dist/default/production\pic18f47q10-cnano-i2c-write-mcc.X.production.hex ranges:
+ dist/default/production\pic18f47q10-cnano-write-mcc.X.production.hex ranges:
   0h - 3h
   F00h - F3Ah
   F3Ch - 16DFh
@@ -25,7 +25,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\pic18f47q10-cnano-i2c-write-mcc.X.production.hex
+  1 = dist/default/production\pic18f47q10-cnano-write-mcc.X.production.hex
 00000000: 1111------------------------------------------------------------
 00000F00: 11111111111111111111111111111111111111111111111111111111111-1111
 00000F40: 1111111111111111111111111111111111111111111111111111111111111111
